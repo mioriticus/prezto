@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR='vim'
+export EDITOR='nano'
 export VISUAL='nano'
 export PAGER='less'
 
@@ -67,12 +67,8 @@ fi
 #
 
 if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$USER"
+  export TMPDIR="/tmp/$LOGNAME"
   mkdir -p -m 700 "$TMPDIR"
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
-if [[ ! -d "$TMPPREFIX" ]]; then
-  mkdir -p "$TMPPREFIX"
-fi
-
